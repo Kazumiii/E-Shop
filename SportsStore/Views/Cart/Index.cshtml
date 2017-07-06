@@ -1,0 +1,52 @@
+﻿@model SportsStore.Models.CartIndexViewModel
+
+@{
+    ViewBag.Title = "Sport Store: Your orders";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Twój koszyk</h2>
+<table width="90%" align="center">
+    <thead>
+        <tr>
+            <th align="center">Quantity</th>
+            <th align="left">Product</th>
+            <th align="right">Price</th>
+            <th align="right">Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var line in Model.Cart.Line)
+        {
+            <tr>
+                <td align="center">@line.Quantities</td>
+                <td align="left">@line.Product.Name</td>
+                <td align="right">@line.Product.Price.ToString("c")</td>
+                <td align="right">@((line.Quantities * line.Product.Price).ToString("c"))</td>
+                <td>
+                    @using (Html.BeginForm("RemoveLine", "Cart"))
+                    {
+                        @Html.Hidden("ProductId", line.Product.ProductID)
+                        @Html.HiddenFor(x => x.ReturnUrl)
+                      
+                        <input class="actionButtons" type="submit" value="Remove" />
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3" align="right">in Total:</td>
+            <td align="right">
+                @Model.Cart.Price().ToString("c")
+            </td>
+
+        </tr>
+    </tfoot>
+</table>
+<p align="center" class="actionButtons">
+    <a href="@Model.ReturnUrl">back to shopping</a>
+   @Html.ActionLink("Order","Checkout")
+</p>
+

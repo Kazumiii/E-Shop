@@ -1,0 +1,27 @@
+﻿@model  SportsStore.WebUI.Models.ProductListViewModel
+@{
+    ViewBag.Title = "Katalog produktów";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>List</title>
+</head>
+<body>
+
+    @foreach(var p in Model.Products)
+    {
+       <div class="item">
+
+           <h3>@p.Name</h3>
+           <h3>@p.Description</h3>
+           <h3>@p.Price.ToString("c")</h3>
+       </div>
+    }
+    <div class="pager">
+       @Html.PageLinks(Model.PagingINfo, x => Url.Action("List", new { page = x }))
+    </div>
+</body>
+</html>

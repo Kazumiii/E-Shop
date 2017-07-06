@@ -1,0 +1,16 @@
+﻿@model SportsStore.Models.LoginViewModel
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Sign in</h2>
+<p>Sign in to get administration  control:</p>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    @Html.EditorForModel()
+    <p><input type="submit" value="Sign in" /></p>
+}
+
