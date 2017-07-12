@@ -39,7 +39,7 @@ namespace SportsStore.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError("", "Nieprawidłowa nazwa użytkownika lub niepoprawne hasło.");
+                    ModelState.AddModelError("", "Wrong password or user name.");
                     return View();
                 }
             }
