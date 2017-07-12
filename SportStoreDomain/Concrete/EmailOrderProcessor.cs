@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 
 namespace SportStoreDomain.Concrete
 {
+
+//Using Http to send E-mail to purchaser with confirmation bought products
  public   class EmailOrderProcessor:IOrderProcessor
     {
         private EmailSettings emailSettings;
