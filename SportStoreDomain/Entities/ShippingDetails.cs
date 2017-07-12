@@ -9,6 +9,7 @@ namespace SportStoreDomain.Entities
 {
 public    class ShippingDetails
     {
+    //Separete dates which have a lot of attributes form  model domain
 
         [Required(ErrorMessage = "Give your name")]
         public string Name { get; set; }
