@@ -8,6 +8,8 @@ using System.Web.Security;
 
 namespace SportStoreDomain.Concrete
 {
+
+//Verify admin authentication 
     public class FormAuthProvider : IAuthProvider
     {
         public bool Authenticate(string userName, string password)
