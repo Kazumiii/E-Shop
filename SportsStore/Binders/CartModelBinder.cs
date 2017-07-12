@@ -7,6 +7,7 @@ using System.Web.ModelBinding;
 
 namespace SportsStore.Binders
 {
+//Using Session status to  keep cart's informationos
     public class CartModelBinder 
     {
         const string sessionKey = "Cart";
