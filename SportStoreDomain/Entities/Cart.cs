@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace SportStoreDomain.Entities
 {
+
+//Standaard CRUD model
    public  class Cart
     {
         List<CartLine> lineCollection = new List<CartLine>();
