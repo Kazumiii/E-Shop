@@ -45,7 +45,7 @@ namespace SportsStore.Infrasctructure
 
           
 
-            //When I want to use IProductRepositroy i use EFProductRepositort, owing to I am independent on intreface IProductRepository 
+            // I use both  IProductRepositroy and  EFProductRepositort, thanks these I am independent on intreface IProductRepository 
             ninjectKernel.Bind<IProductRepository>().To<EFProductRepository>();
             EmailSettings emailSettings = new EmailSettings
             {
