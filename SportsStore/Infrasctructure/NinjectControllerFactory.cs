@@ -14,7 +14,7 @@ using System.Configuration;
 namespace SportsStore.Infrasctructure
 {
 
-    //In this section I use Ninject to solve dependencies
+    // I use Ninject to solve dependencies
     public class NinjectControllerFactory:DefaultControllerFactory
     {
         IKernel ninjectKernel;
