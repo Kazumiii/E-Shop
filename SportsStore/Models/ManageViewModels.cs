@@ -6,7 +6,7 @@ using Microsoft.Owin.Security;
 namespace SportsStore.Models
 {
 
-    //IN this secetion i created  fields  which users will fill out if they want to order   
+    // i create  fields  that  user will fill out if they want to  make  a order   
     public class IndexViewModel
     {
         public bool HasPassword { get; set; }
