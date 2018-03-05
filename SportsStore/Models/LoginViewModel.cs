@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 
 namespace SportsStore.Models
-{//Here i can set what kind of dates from clients are necessery
+{//Here i  set what kind of dates from clients are necessery
     public class LoginViewModel
     {
 
