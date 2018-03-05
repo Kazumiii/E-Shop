@@ -11,7 +11,7 @@ namespace SportsStore.Controllers
     
     public class AdminController : Controller
     {
-//Here are CRUD Operations
+//CRUD Operations
         IProductRepository repo;
         // GET: Admin
 
