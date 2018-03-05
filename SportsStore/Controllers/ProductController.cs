@@ -15,7 +15,7 @@ namespace SportsStore.Controllers
         public int PageSize = 4;
         private IProductRepository repository;
 
-        //One of parts dependency resolver process is use parameters in our construstor
+        //One of parts dependency resolver process uses parameters in our construstor
         public ProductController(IProductRepository productRepository)
         {
             this.repository = productRepository;
