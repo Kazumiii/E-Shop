@@ -53,7 +53,7 @@ namespace SportsStore.Infrasctructure
 .AppSettings["Email.WriteAsFile"] ?? "false")
             };
 
-            //herein is as the same as above
+            // the same as above
             ninjectKernel.Bind<IOrderProcessor>().To<EmailOrderProcessor>().WithConstructorArgument("settings", emailSettings);
 
             ninjectKernel.Bind<IAuthProvider>().To<FormAuthProvider>();
